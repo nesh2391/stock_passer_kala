@@ -5,19 +5,14 @@ var fs = require('fs');
 var mongodb = require('mongodb');
 var MongoClient = require('mongodb').MongoClient;
 
-
+/**
+ * Set these variables
+ */
 var path = '/media/neshant/part1/Data/data/Stock_Data_Files/Historical_Stock_Prices';
 var collection_name='historicData4';
 var location_of_mongo_server='mongodb://localhost:27017/stocks';
 
 var files = fs.readdirSync(path);
-/*for (var i in files) 
-{
-	
-	  console.log('Model Loaded: ' + files[i]);
-	  
-	 
-}*/
 var count_files =0;
 
 
@@ -56,16 +51,6 @@ var insertToMongo = function(url_param,value,callback)
 				   db.close();
 				   callback();
 				});
-			//var collection = db.collection();
-			/*collection.insert(value,function(err,result)
-			{
-				if(err)
-				{console.log("some error occoured"+err);}
-				else
-				{console.log("insert succeeded");}
-				db.close();
-				callback();
-			});		*/
 		}
 	});
 
@@ -101,10 +86,3 @@ var conditioner = function(fileName, primaryPath){
 };
 
 insertHead();
-
-
-
-
-
-
-//console.log(conditioner("AA.csv","/media/neshant/part1/Data/data/Stock_Data_Files/Historical_Stock_Prices"));
