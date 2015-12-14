@@ -1,6 +1,7 @@
 
 
 # CSV-Pareser
+A simple CSV passer for the stocks data set
 
 ## Required settings 
 var path = '/media/neshant/part1/Data/data/Stock_Data_Files/Historical_Stock_Prices';
