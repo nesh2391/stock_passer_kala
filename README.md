@@ -4,7 +4,9 @@
 
 ## Required settings 
 var path = '/media/neshant/part1/Data/data/Stock_Data_Files/Historical_Stock_Prices';
+
 var collection_name='historicData4';
+
 var location_of_mongo_server='mongodb://localhost:27017/stocks';
 
 ##Expectations
